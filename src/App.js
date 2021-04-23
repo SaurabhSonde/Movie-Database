@@ -15,7 +15,7 @@ const App = () => {
 
   const search = async (searchValue) => {
     const results = await axios.get(
-      `http://www.omdbapi.com/?s=${searchValue}&apikey=${apiKey}`
+      `https://www.omdbapi.com/?s=${searchValue}&apikey=${apiKey}`
     );
 
     setResult(results.data.Search);
@@ -23,7 +23,7 @@ const App = () => {
 
   const moreMovieInfo = async (itemId) => {
     const info = await axios.get(
-      `http://www.omdbapi.com/?i=${itemId}&apikey=${apiKey}`
+      `https://www.omdbapi.com/?i=${itemId}&apikey=${apiKey}`
     );
 
     setSelectedMovie(info.data);
